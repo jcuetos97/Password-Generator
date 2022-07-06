@@ -31,12 +31,12 @@ function generatePassword() {
     return;
     }
   
-  for (var i=0;i<passwordnumber;) {
+  for (var i=0;;) {
     if (numeric) {
       var randomnumber = Math.floor (Math.random()*NUMBER.length);
       password.push(NUMBER[randomnumber]);
       i++;
-      if (i===passwordnumber) {
+      if (i==passwordnumber) {
         break;
       }
     }
@@ -45,7 +45,7 @@ function generatePassword() {
       var randomupper = Math.floor (Math.random()*UPPERCASE.length);
       password.push(UPPERCASE[randomupper]);
       i++;
-      if (i===passwordnumber) {
+      if (i==passwordnumber) {
         break;
       }
     }
@@ -54,7 +54,7 @@ function generatePassword() {
       var randomlower = Math.floor (Math.random()*LOWERCASE.length);
       password.push(LOWERCASE[randomlower]);
       i++;
-      if (i===passwordnumber) {
+      if (i==passwordnumber) {
         break;
       }
     }
@@ -63,7 +63,7 @@ function generatePassword() {
       var randomspecial = Math.floor (Math.random()*SPECIAL.length);
       password.push(SPECIAL[randomspecial]);
       i++;
-      if (i===passwordnumber) {
+      if (i==passwordnumber) {
         break;
       }
     }  
